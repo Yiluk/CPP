@@ -1,2 +1,2 @@
-# C-
+# C++
 my C++ learnproject
