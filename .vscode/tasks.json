@@ -1,0 +1,44 @@
+{
+    //C++用
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++",
+            "command": "C:\\TDM-GCC-64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-fexec-charset=GBK" //解决中文乱码
+            ],
+            // 用于编译多个cpp使用(注意修改launch的program)
+            // "args": [
+            //     "-g",
+            //     "D:\\Project\\C++Project\\C++Learn\\Cpp\\storageclass2.cpp",
+            //     "D:\\Project\\C++Project\\C++Learn\\Cpp\\storageclass2support.cpp",
+            //     "-o",
+            //     "${fileDirname}\\write.exe"
+            // ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
